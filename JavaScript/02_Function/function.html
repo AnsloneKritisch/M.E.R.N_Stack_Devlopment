@@ -8,10 +8,23 @@
 </head>
 <body>
 
-    <script>
+    <p id="para">Hello World this in a Text Paragraph</p>
+    <h1 id="head">This is Heading</h1>
+
+<script>
         var age = 10 ;
-        alert("Please confirm your age is = " + age );
-        alert(25+age );
+        // alert("Please confirm your age is = " + age );
+        // // Single line Comment 
+        // alert(25+age );
+        // console.log("My age is ="+age);
+        // document.write("Hello World");
+
+        var data= document.getElementById("para").innerHTML;
+        alert(data);
+        // alert(data2); -> does not work in h1 tags 
+
+        var data2 = document.getElementById("head").innerHTML;
+        console.log(data2);
 
     </script>
     
