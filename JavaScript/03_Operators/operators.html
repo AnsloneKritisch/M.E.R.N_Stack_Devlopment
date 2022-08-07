@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <h1>Aritmatic Operators</h1>
+
     <script>
         // operators we can use are +,-,*,/,% ;
         var a = 10 ;
@@ -16,13 +18,70 @@
 
         var e = 10 , f = 20 , sub , add , multi , div , mod ;
         add = e + f ;
+        sub = f -e ;
+        multi = f*e ;
+        div = f / e ;
+        mod = f % e ;
 
 
-        document.write("Addition of two number = ",+c);
+        document.write("Addition of two number = ",+c,"<br>");
         
-        document.write("Addition of two number = ", +e+f);
-        document.write("Addition of two number = ", +add);
+        document.write("\n Addition of two number = ", +e+f ,"<br>");
+        
+        document.write("\n Addition of two number = ", +add ,"<br>");
+        document.write("\n Sustraction of two number = ", +sub ,"<br>");
+        document.write("\n Multiplication of two number = ", +multi ,"<br>");
+        document.write("\n Division of two number = ", +div ,"<br>");
+        document.write("\n Mod of two number = ", +mod ,"<br>");
+
     </script>
+
+    <h1>Comparison operator</h1>
+
+    <script>
+        // The Commparision Operators Are  <, >, <=, >=, !=, ==
+        var a1 = 35 ,  a2 = 34 , ans1 , ans2, ans3, ans4 ;
+        ans1 = a1 > a2 ;
+        ans2 = a1 < a2 ;
+        ans3 = a1 >= a2 ;
+        ans4 = a1 <= a2 ;
+        document.write(ans1 , "<br>");
+        document.write(ans2 , "<br>"); 
+        document.write(ans3 , "<br>"); 
+        document.write(ans4 , "<br>"); 
+
+    </script>
+
+    <h1> Logical Operators </h1>
+
+
+    <script>
+        // The lOGICAL Operators Are  ! , && , ||
+    
+        var b1=20 , b2=30 , b3 , b4 , b5 , b6 ;
+        b3 = (b1 < b2)
+        document.write(b3 , "<br>"); 
+
+        // if i use ! -> NOT operator than
+        
+        b4 = !(b1 < b2)
+        document.write(b4 , "<br>"); 
+
+        // if i use && -> AND operator than
+
+        b5 = (b1 < b2) && (b2 < b1) 
+        document.write(b5 , "<br>"); 
+
+        // if i use || -> OR operator than
+
+        b6 = (b1 < b2) || (b2 < b1)
+        document.write(b6 , "<br>"); 
+
+
+    </script>
+     
+
+
 
 </body>
 </html>
