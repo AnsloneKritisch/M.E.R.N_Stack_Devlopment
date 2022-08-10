@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    Enter a number : <input type="text" name="" id="num">
+    Enter a number : <input type="text"  id="num">
     <br><br>
     <button onclick="check()">Eligibility Test</button>
 
@@ -25,11 +25,16 @@
                 document.write(" You got a Positive Number");        
             }
 
-            elseif
+            else if(num==0)
+            {
+                document.write(" You got 0");
+
+
+            }
 
             else
             {
-                document.write(" Sorry Not Eligible");
+                document.write(" You got a Negative Number");
             }
 
 
