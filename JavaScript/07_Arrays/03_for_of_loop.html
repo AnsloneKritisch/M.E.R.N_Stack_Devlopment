@@ -8,14 +8,11 @@
 </head>
 <body>
     <script>
-        var a=["1","2","3"] ;
+        var a=["1","2","3","a"] ;
 
-        
-        
-        for ( i in a )
+        for ( i of a )
         {        
-            document.write("<br>"+a[i]);
-            
+            document.write( i+"<br>");     
         }
 
 

@@ -1,0 +1,3 @@
+JSON stands for -> Javascript Object Noation
+JSON Is a light Weight DataInterchange Format 
+JSON is language Indepent 
