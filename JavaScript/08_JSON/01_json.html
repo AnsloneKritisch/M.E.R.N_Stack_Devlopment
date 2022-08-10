@@ -7,6 +7,19 @@
     <title>JSON</title>
 </head>
 <body>
-    
+    <script>
+        var a = ["1", "2" ,"3"];
+
+        var data={one:"1",two:"2",three:"3"};
+        
+        document.write("Hello " +data.one+ " Hello "+data.two+ " Hello "+data.three );
+        document.write("<br> ");
+
+        var data1={one:"1",two:"2",three:"3", contact:[100 , 200 , 300]};
+        for( i of data1.contact)
+        {
+            document.write("Please Check your number: "+i+"<br>");
+        }
+    </script>
 </body>
 </html>

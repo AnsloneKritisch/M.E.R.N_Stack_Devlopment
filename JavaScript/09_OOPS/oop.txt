@@ -1,0 +1,9 @@
+OOP -> Object Orianted Programming 
+I t is a ProgrammingParadgm based on the Concepts of "objects" 
+-> Which Contains both Data and Codes 
+
+Data -> in form Of fields 
+Codes -> in the form of procedure
+
+
+it like a blue print that you use before building a house
