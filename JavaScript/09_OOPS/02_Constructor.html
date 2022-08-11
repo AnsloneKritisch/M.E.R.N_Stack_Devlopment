@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS</title>
+</head>
+<body>
+    <script>
+        
+        class mobile{
+            
+            name = "samsung";
+            time = "2 Years" ;
+            price = "256000";
+
+            show_data()
+            {
+                // return mob.name+mob.time+mob.price;
+                return this.name+this.time+this.price;
+            }
+
+
+            constructor(name,time,price)
+            {
+                this.name=name;
+                this.time=time;
+                this.price=price;
+            }
+
+            
+        }
+        
+
+
+        var mob1 = new mobile("iphone","2 yrs","100000") ;
+        var mob2 = new mobile("iphone9","4 yrs","100000000") ;
+        var mob3 = new mobile("iphone11","3 yrs","100000000") ;
+
+
+        document.write("<br> " +mob1.show_data() );
+        document.write("<br> " +mob2.show_data() );
+        document.write("<br> " +mob3.show_data() );
+
+    </script>
+</body>
+</html>
