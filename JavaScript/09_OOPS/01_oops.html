@@ -9,7 +9,8 @@
 <body>
     <script>
         
-        class mobile{
+        class mobile
+        {
             
             name = "samsung";
             time = "2 Years" ;
@@ -17,16 +18,26 @@
 
             show_data()
             {
-                return mob.name+mob.time+mob.price;
+                // return mob.name+mob.time+mob.price;
+
+                // we use this to asign differet class to different Object
+                return this.name+this.time+this.price;
             }
+
+
         }
         
 
         var mob = new mobile() ;
+        var mob1 = new mobile() ;
         document.write(mob);
         document.write("<br> name of the mobile " +mob.name+ '<br>');
         document.write("Mobile is  = " +mob.time+ " Years old ");
+
+        mob.name=" iphone ";
+        mob1.name=" HTC ";
         document.write("<br> Data  = " +mob.show_data());
+        document.write("<br> Data1  = " +mob1.show_data());
 
 
 
