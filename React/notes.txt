@@ -1,0 +1,13 @@
+>> node -v 
+
+It is used to Check the Version of NOde JS
+
+-------------------------------------------
+We need to Create a Folder and Create a React app
+
+>> cd Folder_Directory
+
+Then Install React app
+
+>> npm i create-react-app
+
