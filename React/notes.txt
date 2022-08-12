@@ -9,5 +9,12 @@ We need to Create a Folder and Create a React app
 
 Then Install React app
 
+nmp -> is used to install/Uninstall module
+
 >> npm i create-react-app
+
+
+npx -> node Package execute -> it is used to execute module
+
+>> npx create-react-app app_name
 
