@@ -1,0 +1,134 @@
+>> alert("Hello World")
+undefined
+
+>>// Anything Written Here is a Comment
+undefined
+
+>>// Basic Data Types
+undefined
+
+>> 10
+10
+
+>> 10.2
+10.2
+
+>> -13.4
+-13.4
+
+// strings
+undefined
+
+>>"HEllo"
+"HEllo"
+
+
+// Boolean
+undefined
+
+>>True
+
+
+clear() ->Helps to Clear th console
+
+>>2+2
+4
+
+>>2*2
+4
+
+>>2/5
+0.4
+
+>>2 ** 5
+32
+
+>>5-1
+4
+
+>>10%2
+0
+
+// Strings
+undefined
+
+
+>>"Django is cool"
+"Django is cool"
+
+>>"Django" + " is Cool"
+
+>>"Django is Cool"
+>>"Django".length
+6
+
+// Backspace also Works
+undefined
+
+"hello \n start a new line"
+"hello 
+ start a new line"
+
+"hello \t start a new line"
+
+"hello 	 start a new line"
+"hello \" start\" "
+"hello \" start\" "
+"hello \ "start \" " 
+
+hello" [2]
+"l"
+
+// Variables
+undefined
+
+// var varname = value ;
+undefined
+
+>>var bank = 100 ;
+undefined
+
+>>bank
+100
+
+>>var deposite = 1000 ;
+undefined
+
+>>var total = deposite + bank ;
+undefined
+
+>>total
+1100
+
+>>var gretting = " Welcome Back "
+undefined
+
+>>var name = "Anshu "
+undefined
+
+>>alert(gretting+name);
+undefined
+
+>>alert{"Hello"}
+console.log("Hey I am her")
+
+>>Hey I am her debugger eval code:1:9
+undefined
+
+>>prompt("Enter your age : ")
+""
+>>var sge = prompt{" Write Your Afg "}
+>>var sge = prompt(Write tour abe Localization)
+
+
+>>var age = prompt("Enter YOur age")
+undefined
+
+>>age
+"200"
+
+​
+
+
+​
+
