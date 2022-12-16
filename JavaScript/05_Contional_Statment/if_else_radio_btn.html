@@ -1,0 +1,46 @@
+<html>
+
+<body>
+    <br><b> Choose your favroite season: </b><br>
+    <input type="radio" id="summer" value="Summer">Summer<br>
+    <input type="radio" id="winter" value="Winter">Winter<br>
+    <input type="radio" id="rainy" value="Rainy">Rainy<br>
+    <input type="radio" id="autumn" value="Autumn">Autumn<br><br>
+
+    <button type="button" onclick=" checkButton()"> Submit </button>
+
+    <h3 id="disp" style="color:green"> </h3>
+    <h4 id="error" style="color:red"> </h4>
+</body>
+
+<script>
+    function checkButton()
+    {
+        if (document.getElementById('summer').checked)
+        {
+            alert("hi");
+        }
+
+        else if (document.getElementById('winter').checked)
+        {
+            document.getElementById("disp").innerHTML = document.getElementById("winter").value + " radio button is checked";
+        }
+
+        else if (document.getElementById('rainy').checked)
+        {
+            document.getElementById("disp").innerHTML = document.getElementById("rainy").value + " radio button is checked";
+        }
+
+        else if (document.getElementById('autumn').checked) {
+            document.getElementById("disp").innerHTML
+                = document.getElementById("autumn").value
+                + " radio button is checked";
+        }
+        else {
+            document.getElementById("error").innerHTML
+                = "You have not selected any season";
+        }
+    } 
+</script>
+
+</html>

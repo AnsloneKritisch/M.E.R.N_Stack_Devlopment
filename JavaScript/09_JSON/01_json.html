@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script> 
+
+        var data={one:"1",two:"2",three:"3"};
+        
+        document.write("Hello " +data.one+ " Hello "+data.two+ " Hello "+data.three );
+        document.write("<br> ");
+
+        var data1={one:"1",two:"2",three:"3", contact:[100 , 200 , 300]};
+        for( i of data1.contact)
+        {
+            document.write("Please Check your number: "+i+"<br>");
+        }
+    </script>
+</body>
+</html>

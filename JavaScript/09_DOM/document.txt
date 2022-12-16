@@ -1,0 +1,69 @@
+got to any website :-
+
+first clear the console -> clear()
+
+>> document 
+
+>> console.dir(document)                      
+
+----> This will help to see all javascript tag used in a website 
+
+>> document.body
+
+
+Here are some important document
+attributes:
+
+   document. URL
+   document. body
+   document. head
+   document. links
+
+There are many methods for grabbing
+ elements from the DOM:
+
+   document. getElementById()
+   document. getElementByClassName
+   document. getElementsByTagName
+   document. querySelector()
+   document. querySelectorAll()
+
+
+Content Interaction 
+-------------------------
+
+
+specialA.setAttribute("href" , "https://www.google.com");
+Uncaught ReferenceError: specialA is not defined
+    <anonymous> debugger eval code:1
+debugger eval code:1:1
+specialA.getAttribute("href" );
+Uncaught ReferenceError: specialA is not defined
+    <anonymous> debugger eval code:1
+debugger eval code:1:1
+var special =  document.querySelector("#special");
+undefined
+var specialA =  special.querySelector("a");
+undefined
+specialA.getAttribute("href" );
+"https://www.facebook.com/"
+specialA.setAttribute("href" , "https://www.google.com");
+undefined
+
+​
+
+
+
+
+
+console :- 
+
+>>var  p =  document.querySelector('p') ;
+
+>>p
+
+p.text
+
+
+
+

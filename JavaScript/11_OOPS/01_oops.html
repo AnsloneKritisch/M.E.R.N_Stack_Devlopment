@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS</title>
+</head>
+<body>
+    <script>
+        
+        class mobile
+        {
+            
+            name = "samsung";
+            time = "2 Years" ;
+            price = "256000";
+
+            show_data()
+            {
+                // return mob.name+mob.time+mob.price;
+
+                // we use this to asign differet class to different Object
+                return this.name+this.time+this.price;
+            }
+
+
+        }
+        
+
+        var mob = new mobile() ;
+        var mob1 = new mobile() ;
+        document.write(mob);
+        document.write("<br> name of the mobile " +mob.name+ '<br>');
+        document.write("Mobile is  = " +mob.time+ " Years old ");
+
+        mob.name=" iphone ";
+        mob1.name=" HTC ";
+        document.write("<br> Data  = " +mob.show_data());
+        document.write("<br> Data1  = " +mob1.show_data());
+
+
+
+    </script>
+</body>
+</html>

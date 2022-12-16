@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    Enter name : <input type="text" name="" id="name">
+    <br><br>
+    Enter age : <input type="text" name="" id="age">
+    <br><br>
+    <button onclick="check()">Eligibility Test</button>
+
+
+
+    <script>
+
+        function check()
+        {
+
+            var age = document.getElementById("age").value;
+
+            var name = document.getElementById("name").value;
+
+            document.write("Welcome "+name);
+             
+            if (age>17)
+            {
+                document.write(" You are Eligible");        
+                document.write(" <br> Let's Have Fun");        
+            }
+
+            else
+            {
+                document.write(" Sorry Not Eligible");
+            }
+
+
+        }
+
+
+    </script>
+</body>
+</html>
