@@ -1,0 +1,61 @@
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+import React from "react"
+import ReactDom from "react-dom"
+import Outside from "./sample_comp"
+import SampleCode from "./test_compo"
+
+
+function Header()
+{
+  return <div style={{ textAlign:'center'}}><h1 style={{color:"blue"}}> This is my Heading </h1></div>
+}
+
+ReactDom.render( <div> <Header></Header> <Outside></Outside> <SampleCode name="anslone"></SampleCode> <Header></Header> </div> ,  document.getElementById("root"))
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+import React from "react";
+
+function SampleCode()
+{
+    return <h1> Hello Its Anslone kritisch  </h1>
+}
+
+export default SampleCode
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+import React from "react";
+
+function SampleCode(props)
+{
+    return <h1 style={{textAlign:'center'}}> Hello Its <span style={{color:'red'}}>{props.name}</span> and my age is  <span style={{color:'red'}}>{props.age}</span>   </h1>
+}
+
+export default SampleCode
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+import React from "react"
+import ReactDom from "react-dom"
+import Outside from "./sample_comp"
+import SampleCode from "./test_compo"
+
+
+function Header()
+{
+  return <div style={{ textAlign:'center'}}><h1 style={{color:"blue"}}> This is my Heading </h1></div>
+}
+
+ReactDom.render( <div> <Header></Header> <Outside></Outside>   <SampleCode name="Anslone" age="18"></SampleCode>  <SampleCode name="Anshu" age="15"></SampleCode><SampleCode name="Palku" age="29"></SampleCode><SampleCode name="Palansh" age="27"></SampleCode><SampleCode name="Kritisch" age="65" ></SampleCode> <Header></Header> </div> ,  document.getElementById("root"))
+

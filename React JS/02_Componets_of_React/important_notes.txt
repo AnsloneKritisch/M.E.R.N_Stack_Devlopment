@@ -1,0 +1,108 @@
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Time To Make Some Changes 
+_____________________________
+
+for that got to folder app_name -> go to src -> Go to index.js 
+then make changes in it :- 
+
+we need to import react and reactdom to use react 
+
+Code:
+import React from "react"
+import ReactDom from "react-dom"
+
+ReactDom.render(<h1> Hello World </h1> ,  document.getElementById("root"))
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Then NPM start command will start the app 
+__________________________________________
+Code: npm start 
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Normally we need different html files to create and write multiples cards 
+
+So to prevent this in React We divide our Websites into Components and use it
+
+Everything we made changes in index.js is shown in the website 
+
+Creating Components(index.js) 
+_________________________
+
+Codes:
+
+import React from "react"
+import ReactDom from "react-dom"
+
+function Header()
+{
+  return <div style={{ textAlign:'center'}}><h1 style={{color:"blue"}}> This is my Heading </h1></div>
+}
+
+ReactDom.render( <div> <Header></Header>  <Header></Header> </div> ,  document.getElementById("root"))
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+We can even create our on components and import in index.js file 
+
+for that first Create an file name in src folder inside the app_name Folder
+
+Create a javascript File inside the src folder and create a component(sample_comp.js)
+________________________________________________________________________________________
+
+
+Code:
+
+import React from "react"
+
+function Outside()
+{
+    return <div> <h1> This is our external components </h1></div>
+
+}
+
+export default Outside
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Import sample_comp.js  into index.js 
+_______________________________________
+
+
+code:
+
+import React from "react"
+import ReactDom from "react-dom"
+import Outside from "./sample_comp"
+
+function Header()
+{
+  return <div style={{ textAlign:'center'}}><h1 style={{color:"blue"}}> This is my Heading </h1></div>
+}
+
+ReactDom.render( <div> <Header></Header> <Outside></Outside> <Header></Header> </div> ,  document.getElementById("root"))
+
+------------------------------------------------------------------------------------------------------------------------------------------
