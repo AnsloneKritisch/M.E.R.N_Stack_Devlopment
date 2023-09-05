@@ -1,0 +1,14 @@
+npm init -y
+____________
+
+The command npm init -y is used to automatically answer "yes" to all prompts that npm might display during the installation of packages or the execution of other commands
+
+npm init
+____________
+
+The npm init command is used to initialize a new Node.js project by creating a package.json file.
+
+npm install
+_____________
+
+IT will download the package and 

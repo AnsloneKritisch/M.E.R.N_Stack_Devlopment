@@ -1,6 +1,0 @@
-how many types we can select data in javascript ?
-id and class both ??
-what is innerhtml ? use and function ?
-is anything other than innerhtml ?
-in which tags alert message can work ? (it does not work in h1 tag)
-Creating Classs is like CReting a Global Function
