@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <div class="box" id="heading">
+        <h1>
+            <%= day %>
+                <%= month %> , <%= year %>
+        </h1>
+    </div>
+
+    <div class="box">
+        <% for (var i = 0; i < todoItems.length; i++) { %>
+            <div class="item">
+                <p class="strikeMe">
+                    <input type="checkbox" class="strikeCheckbox">
+                    <%= todoItems[i] %>
+                </p>
+            </div>
+        <% } %>
+
+                <form class="item" action="/" method="post">
+                    <input type="text" name="list" placeholder="Add new item">
+                    <button type="submit" name="button">+</button>
+                </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all checkboxes and paragraphs with the respective classes
+            const checkboxes = document.querySelectorAll('.strikeCheckbox');
+            const paragraphs = document.querySelectorAll('.strikeMe');
+    
+            // Add an event listener to each checkbox
+            checkboxes.forEach(function (checkbox, index) {
+                checkbox.addEventListener('change', function () {
+                    // Toggle the CSS class 'strikethrough' on the corresponding paragraph
+                    paragraphs[index].classList.toggle('strikethrough', checkbox.checked);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
