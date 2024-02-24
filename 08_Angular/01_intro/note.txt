@@ -1,0 +1,135 @@
+We need an Extra tool to create angular cli
+
+link: https://angular.io/cli
+
+------------------------------------------------
+
+To run angular we need node js as and compiler 
+
+download Nodes JS : https://nodejs.org/en/download
+
+-----------------------------------------------------
+
+Now once it is downloaded let's install angular CLI
+
+code [in terminal] : npm install -g @angular/cli
+
+----------------------------------------------------------
+Let's create a new app 
+
+code: ng new project-name --no-strict --standalone false --routing false
+
+example: ng new intro --no-strict --standalone false --routing false
+
+
+---------------------------------------------------------------------------------
+Now Navigate to the angular project by cd ( change directory ) command
+
+code: cd project-name
+
+---------------------------------------------------------------------------------
+
+Now let's run out project 
+
+code: ng serve
+
+---------------------------------------------------------------------------------
+
+to close the server press ctrl + c 
+
+
+------------------------------------------------------------------------------
+
+Now , so there are so many files where to go what to do 
+
+confuse right ?
+
+As we know we are creating a new app , find a app folder in your directeory folder
+
+1. You can see a html file right ? yes that tha html file that is running on the server - http://localhost:4200/
+    a> make some some changes in it 
+    b> check your browser you can see changes right ? Hurray you did it 
+
+2. You can see a app.component.ts file right yup is connected to html file that is running on the server 
+   a> make a little changes to the title and see the browser , you can see changes right 
+   b> it means your app component is connected to html component 
+
+3. Put an inspect to the root the codes we get are from the index.html file
+
+
+----------------------------------------------------------------------------------------------------
+
+Let's make changes to check how things work :
+
+first : go to app.component.html and remove all the code and place a new code
+______________________________________________________________________________
+
+code : 
+
+<input type="text">
+<p>{{name}}</p>
+
+so we are just trying to control the text in it and we saying the name is important 
+
+
+Second : go to app.component.ts and change the name 
+____________________________________________________
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  name = ' Anshu ';
+}
+
+
+Third : go to app.component.html and make a dynamic change to the name
+________________________________________________________________________
+
+code : 
+
+<input type="text" [(ngModel)]="name">
+<p>{{name}}</p>
+
+
+explanation -> angular is an ngl model it mean -> (Creates a FormControl instance from a domain model and binds it to a form control element.)
+
+
+oooops got and error right , haha ! 
+------------------------------------
+
+
+Why are we getting an error ? how to solve it ?
+                      _____          ______
+
+
+we need to got to app app.module.ts and add a new module ->  FormsModule and import it too
+
+code : 
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule ,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+-----------------------------------------------------------------------------------------------------------
+HURRAY ! you completed the basics

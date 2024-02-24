@@ -18,19 +18,33 @@ const itemSchema = new mongoose.Schema({
 
 const List = mongoose.model('List', itemSchema);
 
-const item1 = new List({
+
+
+// new model 
+
+const cis = new mongoose.Schema({
+  name: String,
+  item: [itemSchema]
+});
+
+const cl = mongoose.model('cl', cis);
+
+
+
+
+const item1 = new cl({
 
   name: "Let's Do it "
 
 });
 
-const item2 = new List({
+const item2 = new cl({
 
   name: "Let's Do it please "
 
 });
 
-const item3 = new List({
+const item3 = new cl({
 
   name: "Let's Do it too "
 });
@@ -38,14 +52,7 @@ const item3 = new List({
 const defaultItems = [item1, item2, item3];
 
 
-List.insertMany(defaultItems)
 
-  .then(() => {
-    console.log('Successfully saved all the fruits');
-  })
-  .catch((err) => {
-    console.error(err);
-  });
 
 app.get("/", function (req, res) {
 
@@ -53,10 +60,11 @@ app.get("/", function (req, res) {
 
     .then((foundItems) => {
       console.log(foundItems);
+      res.render("list", { listTitle: "today", newListItems: foundItems });
+
     })
 
 
-  // res.render("list", { listTitle: "today", newListItems: items });
 
 });
 
@@ -64,13 +72,53 @@ app.post("/", function (req, res) {
 
   const item = req.body.newItem;
 
-  if (req.body.list === "Work") {
-    workItems.push(item);
-    res.redirect("/work");
-  } else {
-    items.push(item);
-    res.redirect("/");
-  }
+  console.log(item);
+
+
+  const newitem = new List({
+
+    name: item
+
+  });
+
+  newitem.save();
+
+  res.redirect("/");
+
+});
+
+
+app.post("/del", function (req, res) {
+  
+  let delitem = req.body.delitem;
+  console.log(delitem);
+
+  List.deleteOne({ _id : delitem })
+
+    .then(() => {
+      console.log("deleted");
+      res.redirect("/");
+    })
+
+    .catch((err) => {
+      console.log(err);
+    })
+  
+});
+
+app.get("/:customListName", function (req, res) {
+
+  const customListName = req.params.customListName;
+  console.log(customListName);
+
+  const nl = new cl({
+    name: customListName ,
+    item: defaultItems
+  });
+
+  nl.save();
+
+  
 });
 
 app.get("/work", function (req, res) {

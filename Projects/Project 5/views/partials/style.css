@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.jumbo {
+    position: relative;
+    background-image: url("https://source.unsplash.com/random/?city,night,dark");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* Set a height to ensure full viewport height */
+    opacity: 0;
+    /* Initially set the opacity to 0 */
+    transition: opacity 1s ease-in-out;
+    /* Add a transition for opacity */
+}
+
+.jumbo.show {
+    opacity: 1;
+    /* When the 'show' class is added, set opacity to 1 */
+}
+
+.jumbo:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    /* Adjust the background color and opacity */
+}
+
+.content {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    /* Set text color to white or any other suitable color */
+    padding-top: 10rem;
+    position: relative;
+}
+/* tool */
+.custom-div {
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0.5rem;
+    color: white;
+    height: 100px;
+    width: 100px;
+}
+/* tool */
+
+.tools{
+    position: relative;
+    background-image: url("https://source.unsplash.com/random/?dark,night");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.tools::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1; 
+}
+
+.tool-data{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 2; /* Ensure content is above overlay */
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+
+}
+#love{
+    border: 2px solid red;
+    background-image: url("https://source.unsplash.com/random/?dark,love");
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+}
+#love:hover{
+    border: 2px solid white;
+    box-shadow: 2px 2px 10px white;
+    background: rgba(0, 0, 0, 0.9);
+   
+}
+
+
+#love h3.display-1 {
+    display: none; 
+}
+
+#love:hover h3.display-1 {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 8px;
+}
+
+
+
+--------------------------------------
+/* weather  */
+
+
+
+
+
+#weather{
+    border: 2px solid blue;
+    background-image: url("https://source.unsplash.com/random/?dark,weather");
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+}
+
+
+#weather:hover{
+    border: 2px solid white;
+    box-shadow: 2px 2px 10px white;
+    background: rgba(0, 0, 0, 0.9);
+   
+}
+
+
+
+#weather .data{
+    display: none; 
+}
+
+
+
+#weather:hover .data{
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 8px;
+}
+
+#weather{
+    border: 2px solid blue;
+    background-image: url("https://source.unsplash.com/random/?weather");
+    background-size: cover;
+    background-position: center;
+}
